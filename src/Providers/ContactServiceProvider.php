@@ -2,6 +2,7 @@
 
 namespace Juzaweb\Modules\Contact\Providers;
 
+use Juzaweb\Core\Facades\Menu;
 use Juzaweb\Core\Providers\ServiceProvider;
 
 class ContactServiceProvider extends ServiceProvider
@@ -28,15 +29,17 @@ class ContactServiceProvider extends ServiceProvider
 
     protected function registerMenus(): void
     {
-        //
+        Menu::make('contact', __('Contact'))->icon('fas fa-envelope');
+
+
     }
 
     protected function registerConfig(): void
     {
         $this->publishes([
-            __DIR__ . '/../../config/config.php' => config_path('contact.php'),
-        ], 'config');
-        $this->mergeConfigFrom(__DIR__ . '/../../config/config.php', 'contact');
+            __DIR__ . '/../../config/contact.php' => config_path('contact.php'),
+        ], 'contact-config');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/contact.php', 'contact');
     }
 
     protected function registerTranslations(): void

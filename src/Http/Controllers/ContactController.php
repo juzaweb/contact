@@ -2,37 +2,56 @@
 
 namespace Juzaweb\Modules\Contact\Http\Controllers;
 
-use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
+use Juzaweb\Core\Facades\Breadcrumb;
 use Juzaweb\Core\Http\Controllers\AdminController;
+use Juzaweb\Modules\Blog\Http\DataTables\ContactsDataTable;
+use Juzaweb\Modules\Contact\Models\Contact;
 
 class ContactController extends AdminController
 {
-    /**
-     * Display a listing of the resource.
-     * @return Renderable
-     */
-    public function index()
+    public function index(ContactsDataTable $dataTable)
     {
-        return view('contact::index');
+        Breadcrumb::add(__('Contacts'));
+
+        return $dataTable->render(
+            'contact::index'
+        );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     * @return Renderable
-     */
     public function create()
     {
-        return view('contact::create');
+        Breadcrumb::add(__('Contacts'), action([self::class, 'index']));
+
+        Breadcrumb::add(__('Create New Contact'));
+
+        $locale = $this->getFormLanguage();
+
+        return view(
+            'contact::create',
+            [
+                'model' => new Contact(),
+                'action' => action([self::class, 'store']),
+                'locale' => $locale,
+            ]
+        );
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Renderable
-     */
-    public function edit($id)
+    public function edit(string $id)
     {
-        return view('contact::edit');
+        Breadcrumb::add(__('Contacts'), action([self::class, 'index']));
+        Breadcrumb::add(__('Edit Contact'));
+
+        $contact = Contact::findOrFail($id);
+        $locale = $this->getFormLanguage();
+
+        return view(
+            'contact::edit',
+            [
+                'model' => $contact,
+                'action' => action([self::class, 'update'], $id),
+                'locale' => $locale,
+            ]
+        );
     }
 }
