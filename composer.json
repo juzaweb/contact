@@ -1,0 +1,16 @@
+{
+    "name": "juzaweb/contact",
+    "type": "juzaweb-module",
+    "description": "Contact Module",
+    "authors": [
+        {
+            "name": "Juzaweb CMS",
+            "email": "admin@juzaweb.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Juzaweb\\Modules\\Contact\\": "src/"
+        }
+    }
+}

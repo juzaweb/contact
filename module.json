@@ -1,0 +1,11 @@
+{
+    "name": "Contact",
+    "alias": "contact",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Juzaweb\\Modules\\Contact\\Providers\\ContactServiceProvider"
+    ],
+    "files": []
+}
