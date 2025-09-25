@@ -10,3 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::post('contact', [\Juzaweb\Modules\Contact\Http\Controllers\ContactController::class, 'store'])
+    ->name('contact.store')
+    ->middleware([\Juzaweb\Core\Http\Middleware\Captcha::class]);

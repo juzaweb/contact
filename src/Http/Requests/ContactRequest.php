@@ -10,17 +10,23 @@
 namespace Juzaweb\Modules\Contact\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Juzaweb\Modules\Contact\Models\Contact;
 
 class ContactRequest extends FormRequest
 {
     public function rules(): array
     {
         return [
-			'name' => ['required'],
-			'email' => ['required'],
-			'phone' => ['required'],
-			'subject' => ['required'],
+			'name' => ['required', 'string', 'max:200'],
+			'email' => ['required', 'email'],
+			'phone' => ['nullable', 'string', 'max:20'],
+			'subject' => ['required', 'string', 'max:200'],
 			'message' => ['required'],
 		];
+    }
+
+    public function save()
+    {
+        Contact::create($this->validated());
     }
 }

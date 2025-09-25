@@ -7,6 +7,7 @@ use Juzaweb\Core\Facades\Breadcrumb;
 use Juzaweb\Core\Http\Controllers\AdminController;
 use Juzaweb\Core\Http\Requests\BulkActionsRequest;
 use Juzaweb\Modules\Contact\Http\DataTables\ContactsDataTable;
+use Juzaweb\Modules\Contact\Http\Requests\ContactRequest;
 use Juzaweb\Modules\Contact\Models\Contact;
 
 class ContactController extends AdminController
@@ -38,6 +39,15 @@ class ContactController extends AdminController
                 'locale' => $locale,
             ]
         );
+    }
+
+    public function store(ContactRequest $request)
+    {
+        $request->save();
+
+        return $this->success([
+            'message' => __('Contact created successfully!'),
+        ]);
     }
 
     public function update()
