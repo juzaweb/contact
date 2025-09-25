@@ -7,7 +7,7 @@
  * @link       https://cms.juzaweb.com
  */
 
-namespace Juzaweb\Modules\Blog\Http\DataTables;
+namespace Juzaweb\Modules\Contact\Http\DataTables;
 
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Illuminate\Database\Eloquent\Model;
@@ -31,7 +31,8 @@ class ContactsDataTable extends DataTable
         return [
             Column::checkbox(),
             Column::id(),
-            Column::editLink('title', admin_url('contacts/{id}/edit'), __('Title')),
+            Column::editLink('subject', admin_url('contacts/{id}/edit'), __('Title')),
+            Column::make('name', __('Name')),
             Column::createdAt(),
             Column::actions(),
         ];

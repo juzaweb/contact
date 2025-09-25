@@ -29,9 +29,11 @@ class ContactServiceProvider extends ServiceProvider
 
     protected function registerMenus(): void
     {
-        Menu::make('contact', __('Contact'))->icon('fas fa-envelope');
+        //Menu::make('contact', __('Contact'))->icon('fas fa-envelope');
 
-
+        Menu::make('contacts', __('Contacts'))
+            ->icon('fas fa-envelope')
+            ->permissions('contacts.index');
     }
 
     protected function registerConfig(): void
@@ -52,7 +54,7 @@ class ContactServiceProvider extends ServiceProvider
     {
         $viewPath = resource_path('views/modules/contact');
 
-        $sourcePath = __DIR__ . '/../src/resources/views';
+        $sourcePath = __DIR__ . '/../resources/views';
 
         $this->publishes([
             $sourcePath => $viewPath

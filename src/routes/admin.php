@@ -12,5 +12,7 @@
 */
 
 use Juzaweb\Core\Facades\RouteResource;
+use Juzaweb\Modules\Contact\Http\Controllers\ContactController;
 
-RouteResource::admin('contacts', \Juzaweb\Modules\Contact\Http\Controllers\ContactController::class);
+RouteResource::admin('contacts', ContactController::class)
+    ->only(['index', 'edit', 'update', 'destroy']);

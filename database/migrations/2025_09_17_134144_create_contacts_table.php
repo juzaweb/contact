@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('user_agent')->nullable();
             $table->uuid('created_by_id')->nullable();
             $table->string('created_by_type')->nullable();
+            $table->string('status', 15)->default('new');
             $table->timestamps();
 
             $table->index(['created_by_id', 'created_by_type']);
