@@ -34,7 +34,7 @@ class ThankNotification extends Notification implements ShouldQueue
         return (new MailMessage)
             ->subject(__('Thank you for contacting us'))
             ->greeting(__('Hello!') .' '. $this->contact->name)
-            ->line('We have received your message. We will get back to you shortly.')
-            ->line('Thank you for using ' . setting('sitename', 'our application') . '!');
+            ->line(__('We have received your message. We will get back to you shortly.'))
+            ->line(__('Thank you for using :sitename!', ['sitename' => setting('sitename', 'our application')]));
     }
 }
