@@ -29,7 +29,15 @@ class ContactRequest extends FormRequest
 
     public function save()
     {
-        $contact = Contact::create($this->validated());
+        $contact = Contact::create(
+            [
+                ...$this->validated(),
+                'ip_address' => $this->ip(),
+                'user_agent' => $this->userAgent(),
+                'created_by_id' => $this->user()?->id,
+                'created_by_type' => $this->user()?->getMorphClass(),
+            ]
+        );
 
         Notification::route('mail', $contact->email)
             ->notify(new ThankNotification($contact));
