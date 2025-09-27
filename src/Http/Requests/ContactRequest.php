@@ -10,7 +10,9 @@
 namespace Juzaweb\Modules\Contact\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Notification;
 use Juzaweb\Modules\Contact\Models\Contact;
+use Juzaweb\Modules\Contact\Notifications\ThankNotification;
 
 class ContactRequest extends FormRequest
 {
@@ -27,6 +29,9 @@ class ContactRequest extends FormRequest
 
     public function save()
     {
-        Contact::create($this->validated());
+        $contact = Contact::create($this->validated());
+
+        Notification::route('mail', $contact->email)
+            ->notify(new ThankNotification($contact));
     }
 }
