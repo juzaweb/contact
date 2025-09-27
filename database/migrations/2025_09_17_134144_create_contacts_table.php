@@ -20,12 +20,11 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('subject')->nullable();
             $table->longText('message');
-            $table->string('status')->index()->default('new');
+            $table->string('status', 15)->index()->default('new');
             $table->string('ip_address')->nullable();
             $table->string('user_agent')->nullable();
             $table->uuid('created_by_id')->nullable();
             $table->string('created_by_type')->nullable();
-            $table->string('status', 15)->default('new');
             $table->timestamps();
 
             $table->index(['created_by_id', 'created_by_type']);
