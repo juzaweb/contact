@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Juzaweb\Core\Facades\Breadcrumb;
 use Juzaweb\Core\Http\Controllers\AdminController;
 use Juzaweb\Core\Http\Requests\BulkActionsRequest;
+use Juzaweb\Modules\Contact\Enums\ContactStatus;
 use Juzaweb\Modules\Contact\Http\DataTables\ContactsDataTable;
 use Juzaweb\Modules\Contact\Http\Requests\ContactRequest;
 use Juzaweb\Modules\Contact\Models\Contact;
@@ -50,9 +51,17 @@ class ContactController extends AdminController
         ]);
     }
 
-    public function update()
+    public function update(Request $request, string $id)
     {
-        
+        $contact = Contact::findOrFail($id);
+
+        $contact->update([
+            'status' => ContactStatus::from($request->input('status')),
+        ]);
+
+        return $this->success([
+            'message' => __('Contact updated successfully!'),
+        ]);
     }
 
     public function bulk(BulkActionsRequest $request)

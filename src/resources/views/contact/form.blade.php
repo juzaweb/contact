@@ -21,18 +21,21 @@
                         <h3 class="card-title">{{ __('Information') }}</h3>
                     </div>
                     <div class="card-body">
-                        {{ Field::text($model, "name") }}
+                        {{ __('Name') }}: {{ $model->name }} <br>
+                        {{ __('Email') }}: {{ $model->email }} <br>
 
-                        {{ Field::text($model, "email") }}
+                        {{ __('Phone') }}: {{ $model->phone }} <br>
+                        {{ __('Subject') }}: {{ $model->subject }} <br>
+                        {{ __('Message') }}: <br>
 
-
+                        <div style="white-space: pre-line;">{{ $model->message }}</div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3">
 
-                <select class="form-control" name="status"></select>
+                {{ Field::select($model, 'status')->dropDownList(\Juzaweb\Modules\Contact\Enums\ContactStatus::toArray()) }}
 
                 <button class="btn btn-primary">
                     <i class="fas fa-save"></i> {{ __('Save') }}

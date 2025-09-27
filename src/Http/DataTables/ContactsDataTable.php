@@ -33,6 +33,7 @@ class ContactsDataTable extends DataTable
             Column::id(),
             Column::editLink('subject', admin_url('contacts/{id}/edit'), __('Title')),
             Column::make('name', __('Name')),
+            Column::make('status', __('Status'))->center()->width(100),
             Column::createdAt(),
             Column::actions(),
         ];
