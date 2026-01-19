@@ -13,7 +13,14 @@
             "Juzaweb\\Modules\\Contact\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Juzaweb\\Modules\\Contact\\Tests\\": "tests/"
+        }
+    },
     "require-dev": {
-        "juzaweb/core": "dev-master"
+        "juzaweb/core": "dev-master",
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^10.5"
     }
 }
