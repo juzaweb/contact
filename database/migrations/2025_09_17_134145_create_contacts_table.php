@@ -1,5 +1,4 @@
 <?php
-
 /**
  * JUZAWEB CMS - Laravel CMS for Your Project
  *
@@ -21,9 +20,11 @@ return new class extends Migration
             'contacts',
             function (Blueprint $table) {
                 $table->uuid('id')->primary();
+                $table->string('name');
+                $table->string('email');
                 $table->string('phone')->nullable();
                 $table->string('subject')->nullable();
-                $table->mediumText('message');
+                $table->longText('message');
                 $table->string('status', 15)->index()->default('new');
                 $table->string('ip_address')->nullable();
                 $table->string('user_agent')->nullable();
