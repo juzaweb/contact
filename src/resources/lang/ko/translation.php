@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'back' => '뒤로',
+    'closed' => '종료됨',
+    'contact' => '연락처',
+    'contact_created_successfully' => '연락처가 성공적으로 생성되었습니다!',
+    'contact_name' => '연락처 :name',
+    'contact_updated_successfully' => '연락처가 성공적으로 수정되었습니다!',
+    'contacts' => '연락처',
+    'deleted_successfully' => '성공적으로 삭제되었습니다!',
+    'email' => '이메일',
+    'hello' => '안녕하세요!',
+    'in_progress' => '진행 중',
+    'information' => '정보',
+    'message' => '메시지',
+    'name' => '이름',
+    'new' => '새로운',
+    'phone' => '전화',
+    'resolved' => '해결됨',
+    'save' => '저장',
+    'status' => '상태',
+    'subject' => '제목',
+    'thank_you_for_contacting_us' => '문의해 주셔서 감사합니다',
+    'thank_you_for_using_sitename' => ':sitename을 사용해 주셔서 감사합니다!',
+    'title' => '제목',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => '메시지를 받았습니다. 곧 연락드리겠습니다.',
+];

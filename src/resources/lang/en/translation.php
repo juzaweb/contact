@@ -1,9 +1,28 @@
 <?php
-/**
- * JUZAWEB CMS - Laravel CMS for Your Project
- *
- * @package    juzaweb/cms
- * @author     The Anh Dang
- * @link       https://cms.juzaweb.com
- * @license    GNU V2
- */
+
+return [
+    'contact' => 'Contact',
+    'contacts' => 'Contacts',
+    'back' => 'Back',
+    'information' => 'Information',
+    'name' => 'Name',
+    'email' => 'Email',
+    'phone' => 'Phone',
+    'subject' => 'Subject',
+    'message' => 'Message',
+    'save' => 'Save',
+    'new' => 'New',
+    'in_progress' => 'In Progress',
+    'resolved' => 'Resolved',
+    'closed' => 'Closed',
+    'title' => 'Title',
+    'status' => 'Status',
+    'contact_name' => 'Contact :name',
+    'contact_created_successfully' => 'Contact created successfully!',
+    'contact_updated_successfully' => 'Contact updated successfully!',
+    'deleted_successfully' => 'Deleted successfully!',
+    'thank_you_for_contacting_us' => 'Thank you for contacting us',
+    'hello' => 'Hello!',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => 'We have received your message. We will get back to you shortly.',
+    'thank_you_for_using_sitename' => 'Thank you for using :sitename!',
+];

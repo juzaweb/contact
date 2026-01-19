@@ -34,8 +34,6 @@ class ContactRequest extends FormRequest
                 ...$this->validated(),
                 'ip_address' => $this->ip(),
                 'user_agent' => $this->userAgent(),
-                'created_by_id' => $this->user()?->id,
-                'created_by_type' => $this->user()?->getMorphClass(),
             ]
         );
 

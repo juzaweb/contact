@@ -3,7 +3,7 @@
 @section('content')
     <div class="row mt-3">
         <div class="col-md-12">
-            {{--@component('core::components.datatables.filters')
+            {{--@component('components.datatables.filters')
                 <div class="col-md-3 jw-datatable_filters">
 
                 </div>
@@ -13,7 +13,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">{{ __('Contacts') }}</h3>
+                    <h3 class="card-title">{{ __('contact::translation.contacts') }}</h3>
                 </div>
                 <div class="card-body">
                     {{ $dataTable->table() }}
@@ -24,5 +24,5 @@
 @endsection
 
 @section('scripts')
-    {{ $dataTable->scripts() }}
+    {{ $dataTable->scripts(null, ['nonce' => csp_script_nonce()]) }}
 @endsection

@@ -11,8 +11,8 @@
 |
 */
 
-use Juzaweb\Core\Facades\RouteResource;
 use Juzaweb\Modules\Contact\Http\Controllers\ContactController;
+use Juzaweb\Modules\Core\Facades\RouteResource;
 
 RouteResource::admin('contacts', ContactController::class)
-    ->only(['index', 'edit', 'update', 'destroy', 'bulk']);
+    ->except(['store', 'create', 'destroy']);

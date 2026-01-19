@@ -2,9 +2,9 @@
 
 namespace Juzaweb\Modules\Contact\Providers;
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-use Juzaweb\Core\Facades\Locale;
+use Illuminate\Support\Facades\Route;
+use Juzaweb\Modules\Core\Facades\Locale;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -20,7 +20,7 @@ class RouteServiceProvider extends ServiceProvider
             //     ->prefix('api/v1')
             //     ->group(__DIR__ . '/../routes/api.php');
 
-            $adminPrefix = $this->app['config']->get('core.admin_prefix');
+            $adminPrefix = $this->app['config']->get('core.admin_prefix') . '/{websiteId}';
 
             Route::middleware(['admin'])
                 ->prefix($adminPrefix)

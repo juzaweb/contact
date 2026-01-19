@@ -32,9 +32,9 @@ class ThankNotification extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject(__('Thank you for contacting us'))
-            ->greeting(__('Hello!') .' '. $this->contact->name)
-            ->line(__('We have received your message. We will get back to you shortly.'))
-            ->line(__('Thank you for using :sitename!', ['sitename' => setting('sitename', 'our application')]));
+            ->subject(__('contact::translation.thank_you_for_contacting_us'))
+            ->greeting(__('contact::translation.hello') .' '. $this->contact->name)
+            ->line(__('contact::translation.we_have_received_your_message_we_will_get_back_to_you_shortly'))
+            ->line(__('contact::translation.thank_you_for_using_sitename', ['sitename' => setting('sitename', 'our application')]));
     }
 }

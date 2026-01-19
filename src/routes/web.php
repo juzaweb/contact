@@ -11,6 +11,8 @@
 |
 */
 
-Route::post('contact', [\Juzaweb\Modules\Contact\Http\Controllers\ContactController::class, 'store'])
-    ->name('contact.store')
-    ->middleware([\Juzaweb\Core\Http\Middleware\Captcha::class]);
+use Juzaweb\Modules\Contact\Http\Controllers\ContactController;
+use Juzaweb\Modules\Core\Http\Middleware\VerifyToken;
+
+Route::post('contact', [ContactController::class, 'store'])
+    ->name('contact.store');

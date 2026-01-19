@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'back' => 'Quay lại',
+    'closed' => 'Đã đóng',
+    'contact' => 'Liên hệ',
+    'contact_created_successfully' => 'Liên hệ đã được tạo thành công!',
+    'contact_name' => 'Liên hệ :name',
+    'contact_updated_successfully' => 'Liên hệ đã được cập nhật thành công!',
+    'contacts' => 'Liên hệ',
+    'deleted_successfully' => 'Xóa thành công!',
+    'email' => 'Email',
+    'hello' => 'Xin chào!',
+    'in_progress' => 'Đang xử lý',
+    'information' => 'Thông tin',
+    'message' => 'Tin nhắn',
+    'name' => 'Tên',
+    'new' => 'Mới',
+    'phone' => 'Điện thoại',
+    'resolved' => 'Đã được giải quyết',
+    'save' => 'Lưu',
+    'status' => 'Trạng thái',
+    'subject' => 'Chủ đề',
+    'thank_you_for_contacting_us' => 'Cảm ơn bạn đã liên hệ với chúng tôi',
+    'thank_you_for_using_sitename' => 'Cảm ơn bạn đã sử dụng :sitename!',
+    'title' => 'Tiêu đề',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => 'Chúng tôi đã nhận được tin nhắn của bạn. Sẽ liên lạc lại sớm.',
+];

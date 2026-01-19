@@ -2,8 +2,8 @@
 
 namespace Juzaweb\Modules\Contact\Providers;
 
-use Juzaweb\Core\Facades\Menu;
-use Juzaweb\Core\Providers\ServiceProvider;
+use Juzaweb\Modules\Core\Facades\Menu;
+use Juzaweb\Modules\Core\Providers\ServiceProvider;
 
 class ContactServiceProvider extends ServiceProvider
 {
@@ -23,25 +23,34 @@ class ContactServiceProvider extends ServiceProvider
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
-        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../Database/migrations');
         $this->app->register(RouteServiceProvider::class);
     }
 
     protected function registerMenus(): void
     {
-        //Menu::make('contact', __('Contact'))->icon('fas fa-envelope');
+        //Menu::make('contact', function () {
+        //    return [
+        //        'title' => __('contact::translation.contact'),
+        //        'icon' => 'fas fa-envelope',
+        //    ];
+        //});
 
-        Menu::make('contacts', __('Contacts'))
-            ->icon('fas fa-envelope')
-            ->permissions('contacts.index');
+        Menu::make('contacts', function () {
+            return [
+                'title' => __('contact::translation.contacts'),
+                'icon' => 'fas fa-envelope',
+                'permissions' => 'contacts.index',
+            ];
+        });
     }
 
     protected function registerConfig(): void
     {
         $this->publishes([
-            __DIR__ . '/../../config/contact.php' => config_path('contact.php'),
+            __DIR__ . '/../config/contact.php' => config_path('contact.php'),
         ], 'contact-config');
-        $this->mergeConfigFrom(__DIR__ . '/../../config/contact.php', 'contact');
+        $this->mergeConfigFrom(__DIR__ . '/../config/contact.php', 'contact');
     }
 
     protected function registerTranslations(): void

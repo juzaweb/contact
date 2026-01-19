@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'back' => 'Назад',
+    'closed' => 'Закрыто',
+    'contact' => 'Контакт',
+    'contact_created_successfully' => 'Контакт успешно создан!',
+    'contact_name' => 'Контакт :name',
+    'contact_updated_successfully' => 'Контакт успешно обновлен!',
+    'contacts' => 'Контакты',
+    'deleted_successfully' => 'Успешно удалено!',
+    'email' => 'Электронная почта',
+    'hello' => 'Здравствуйте!',
+    'in_progress' => 'В процессе',
+    'information' => 'Информация',
+    'message' => 'Сообщение',
+    'name' => 'Имя',
+    'new' => 'Новый',
+    'phone' => 'Телефон',
+    'resolved' => 'Решено',
+    'save' => 'Сохранить',
+    'status' => 'Статус',
+    'subject' => 'Тема',
+    'thank_you_for_contacting_us' => 'Спасибо за обращение к нам',
+    'thank_you_for_using_sitename' => 'Спасибо за использование :sitename!',
+    'title' => 'Заголовок',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => 'Мы получили ваше сообщение. Скоро свяжемся с вами.',
+];

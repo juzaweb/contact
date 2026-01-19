@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'back' => '戻る',
+    'closed' => 'クローズ済み',
+    'contact' => '連絡先',
+    'contact_created_successfully' => '連絡先が正常に作成されました!',
+    'contact_name' => '連絡先 :name',
+    'contact_updated_successfully' => '連絡先が正常に更新されました!',
+    'contacts' => '連絡先',
+    'deleted_successfully' => '正常に削除されました!',
+    'email' => 'メール',
+    'hello' => 'こんにちは!',
+    'in_progress' => '進行中',
+    'information' => '情報',
+    'message' => 'メッセージ',
+    'name' => '名前',
+    'new' => '新規',
+    'phone' => '電話',
+    'resolved' => '解決済み',
+    'save' => '保存',
+    'status' => 'ステータス',
+    'subject' => '件名',
+    'thank_you_for_contacting_us' => 'お問い合わせいただきありがとうございます',
+    'thank_you_for_using_sitename' => ':sitename をご利用いただきありがとうございます!',
+    'title' => 'タイトル',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => 'メッセージを受け取りました。後ほどご連絡いたします。',
+];

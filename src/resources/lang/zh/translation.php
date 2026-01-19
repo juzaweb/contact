@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'back' => '返回',
+    'closed' => '已关闭',
+    'contact' => '联系',
+    'contact_created_successfully' => '联系人创建成功!',
+    'contact_name' => '联系人 :name',
+    'contact_updated_successfully' => '联系人更新成功!',
+    'contacts' => '联系人',
+    'deleted_successfully' => '删除成功!',
+    'email' => '电子邮件',
+    'hello' => '您好!',
+    'in_progress' => '进行中',
+    'information' => '信息',
+    'message' => '消息',
+    'name' => '名称',
+    'new' => '新',
+    'phone' => '电话',
+    'resolved' => '已解决',
+    'save' => '保存',
+    'status' => '状态',
+    'subject' => '主题',
+    'thank_you_for_contacting_us' => '感谢您联系我们',
+    'thank_you_for_using_sitename' => '感谢您使用 :sitename!',
+    'title' => '标题',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => '我们已收到您的消息。我们将尽快与您联系。',
+];

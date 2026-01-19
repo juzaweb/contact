@@ -11,11 +11,11 @@ namespace Juzaweb\Modules\Contact\Http\DataTables;
 
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Illuminate\Database\Eloquent\Model;
-use Juzaweb\Core\DataTables\Action;
-use Juzaweb\Core\DataTables\BulkAction;
-use Juzaweb\Core\DataTables\Column;
-use Juzaweb\Core\DataTables\DataTable;
 use Juzaweb\Modules\Contact\Models\Contact;
+use Juzaweb\Modules\Core\DataTables\Action;
+use Juzaweb\Modules\Core\DataTables\BulkAction;
+use Juzaweb\Modules\Core\DataTables\Column;
+use Juzaweb\Modules\Core\DataTables\DataTable;
 
 class ContactsDataTable extends DataTable
 {
@@ -31,9 +31,11 @@ class ContactsDataTable extends DataTable
         return [
             Column::checkbox(),
             Column::id(),
-            Column::editLink('subject', admin_url('contacts/{id}/edit'), __('Title')),
-            Column::make('name', __('Name')),
-            Column::make('status', __('Status'))->center()->width(100),
+            Column::editLink('subject', admin_url('contacts/{id}/edit'), __('contact::translation.title')),
+            Column::make('name', __('contact::translation.name')),
+            Column::make('email', __('contact::translation.email')),
+            Column::make('phone', __('contact::translation.phone')),
+            Column::make('status', __('contact::translation.status'))->center()->width(100),
             Column::createdAt(),
             Column::actions(),
         ];

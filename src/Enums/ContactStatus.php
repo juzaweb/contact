@@ -27,10 +27,10 @@ enum ContactStatus: string
     public function label(): string
     {
         return match ($this) {
-            self::NEW => __('New'),
-            self::IN_PROGRESS => __('In Progress'),
-            self::RESOLVED => __('Resolved'),
-            self::CLOSED => __('Closed'),
+            self::NEW => __('contact::translation.new'),
+            self::IN_PROGRESS => __('contact::translation.in_progress'),
+            self::RESOLVED => __('contact::translation.resolved'),
+            self::CLOSED => __('contact::translation.closed'),
         };
     }
 }

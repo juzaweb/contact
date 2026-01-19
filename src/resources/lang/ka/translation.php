@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'contact' => 'კონტაქტი',
+    'contacts' => 'კონტაქტები',
+    'back' => 'უკან',
+    'information' => 'ინფორმაცია',
+    'name' => 'სახელი',
+    'email' => 'ელ. ფოსტა',
+    'phone' => 'ტელეფონი',
+    'subject' => 'თემა',
+    'message' => 'შეტყობინება',
+    'save' => 'შენახვა',
+    'new' => 'ახალი',
+    'in_progress' => 'მიმდინარეობს',
+    'resolved' => 'გადაჭრილი',
+    'closed' => 'დახურული',
+    'title' => 'სათაური',
+    'status' => 'სტატუსი',
+    'contact_name' => 'კონტაქტი :name',
+    'contact_created_successfully' => 'კონტაქტი შეიქმნა!',
+    'contact_updated_successfully' => 'კონტაქტი განახლდა!',
+    'deleted_successfully' => 'წარმატებით წაიშალა!',
+    'thank_you_for_contacting_us' => 'გმადლობთ რომ დაგვიკავშირდით',
+    'hello' => 'გამარჯობა!',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => 'ჩვენ მივიღეთ თქვენი შეტყობინება. მალე დაგიბრუნდებით პასუხს.',
+    'thank_you_for_using_sitename' => 'გმადლობთ :sitename-ის გამოყენებისთვის!',
+];

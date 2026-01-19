@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'contact' => 'Hafðu samband',
+    'contacts' => 'Tengiliðir',
+    'back' => 'Til baka',
+    'information' => 'Upplýsingar',
+    'name' => 'Nafn',
+    'email' => 'Netfang',
+    'phone' => 'Sími',
+    'subject' => 'Efni',
+    'message' => 'Skilaboð',
+    'save' => 'Vista',
+    'new' => 'Nýtt',
+    'in_progress' => 'Í vinnslu',
+    'resolved' => 'Leyst',
+    'closed' => 'Lokað',
+    'title' => 'Titill',
+    'status' => 'Staða',
+    'contact_name' => 'Tengiliður :name',
+    'contact_created_successfully' => 'Tengiliður búinn til!',
+    'contact_updated_successfully' => 'Tengiliður uppfærður!',
+    'deleted_successfully' => 'Eytt!',
+    'thank_you_for_contacting_us' => 'Takk fyrir að hafa samband',
+    'hello' => 'Halló!',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => 'Við höfum móttekið skilaboðin þín. Við munum hafa samband við þig fljótlega.',
+    'thank_you_for_using_sitename' => 'Takk fyrir að nota :sitename!',
+];

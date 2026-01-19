@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'back' => 'Zpět',
+    'closed' => 'Uzavřeno',
+    'contact' => 'Kontakt',
+    'contact_created_successfully' => 'Kontakt byl úspěšně vytvořen!',
+    'contact_name' => 'Kontakt :name',
+    'contact_updated_successfully' => 'Kontakt byl úspěšně aktualizován!',
+    'contacts' => 'Kontakty',
+    'deleted_successfully' => 'Úspěšně odstraněno!',
+    'email' => 'E-mail',
+    'hello' => 'Ahoj!',
+    'in_progress' => 'Probíhá',
+    'information' => 'Informace',
+    'message' => 'Zpráva',
+    'name' => 'Jméno',
+    'new' => 'Nový',
+    'phone' => 'Telefon',
+    'resolved' => 'Vyřešeno',
+    'save' => 'Uložit',
+    'status' => 'Stav',
+    'subject' => 'Předmět',
+    'thank_you_for_contacting_us' => 'Děkujeme, že jste nás kontaktovali',
+    'thank_you_for_using_sitename' => 'Děkujeme za použití :sitename!',
+    'title' => 'Název',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => 'Obdrželi jsme vaši zprávu. Brzy se vám ozveme.',
+];

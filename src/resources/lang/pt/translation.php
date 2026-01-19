@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'back' => 'Voltar',
+    'closed' => 'Fechado',
+    'contact' => 'Contato',
+    'contact_created_successfully' => 'Contato criado com sucesso!',
+    'contact_name' => 'Contato :name',
+    'contact_updated_successfully' => 'Contato atualizado com sucesso!',
+    'contacts' => 'Contatos',
+    'deleted_successfully' => 'Excluído com sucesso!',
+    'email' => 'E-mail',
+    'hello' => 'Olá!',
+    'in_progress' => 'Em andamento',
+    'information' => 'Informação',
+    'message' => 'Mensagem',
+    'name' => 'Nome',
+    'new' => 'Novo',
+    'phone' => 'Telefone',
+    'resolved' => 'Resolvido',
+    'save' => 'Salvar',
+    'status' => 'Status',
+    'subject' => 'Assunto',
+    'thank_you_for_contacting_us' => 'Obrigado por entrar em contato conosco',
+    'thank_you_for_using_sitename' => 'Obrigado por usar :sitename!',
+    'title' => 'Título',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => 'Recebemos sua mensagem. Em breve entraremos em contato.',
+];

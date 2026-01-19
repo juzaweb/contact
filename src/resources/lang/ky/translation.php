@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'contact' => 'Байланыш',
+    'contacts' => 'Байланыштар',
+    'back' => 'Артка',
+    'information' => 'Маалымат',
+    'name' => 'Аты',
+    'email' => 'Электрондук почта',
+    'phone' => 'Телефон',
+    'subject' => 'Тема',
+    'message' => 'Билдирүү',
+    'save' => 'Сактоо',
+    'new' => 'Жаңы',
+    'in_progress' => 'Аткарылууда',
+    'resolved' => 'Чечилди',
+    'closed' => 'Жабык',
+    'title' => 'Аталышы',
+    'status' => 'Абалы',
+    'contact_name' => 'Байланыш :name',
+    'contact_created_successfully' => 'Байланыш түзүлдү!',
+    'contact_updated_successfully' => 'Байланыш жаңыртылды!',
+    'deleted_successfully' => 'Ийгиликтүү өчүрүлдү!',
+    'thank_you_for_contacting_us' => 'Биз менен байланышканыңыз үчүн рахмат',
+    'hello' => 'Салам!',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => 'Биз сиздин билдирүүңүздү алдык. Жакында жооп беребiz.',
+    'thank_you_for_using_sitename' => ':sitename колдонгонуңуз үчүн рахмат!',
+];

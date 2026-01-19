@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'contact' => 'Anermis',
+    'contacts' => 'Inermisen',
+    'back' => 'Uγal',
+    'information' => 'Talγut',
+    'name' => 'Isem',
+    'email' => 'Imayl',
+    'phone' => 'Tiliγri',
+    'subject' => 'Asentel',
+    'message' => 'Izen',
+    'save' => 'Sekles',
+    'new' => 'Amaynut',
+    'in_progress' => 'Yettwag',
+    'resolved' => 'Yefra',
+    'closed' => 'Yemdel',
+    'title' => 'Azwel',
+    'status' => 'Addad',
+    'contact_name' => 'Anermis :name',
+    'contact_created_successfully' => 'Anermis yettwarna!',
+    'contact_updated_successfully' => 'Anermis yettwalqem!',
+    'deleted_successfully' => 'Yettwamḥu!',
+    'thank_you_for_contacting_us' => 'Tanemmirt ɣef unermes-ik',
+    'hello' => 'Azul!',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => 'Nremmes-d izen-ik. Ad ak-d-nerr tiririt deg wazal aqurban.',
+    'thank_you_for_using_sitename' => 'Tanemmirt ɣef useqdec n :sitename!',
+];

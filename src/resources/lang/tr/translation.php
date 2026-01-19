@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'back' => 'Geri',
+    'closed' => 'Kapandı',
+    'contact' => 'İletişim',
+    'contact_created_successfully' => 'Kişi başarıyla oluşturuldu!',
+    'contact_name' => 'İletişim :name',
+    'contact_updated_successfully' => 'Kişi başarıyla güncellendi!',
+    'contacts' => 'İletişimler',
+    'deleted_successfully' => 'Başarıyla silindi!',
+    'email' => 'E-posta',
+    'hello' => 'Merhaba!',
+    'in_progress' => 'Devam ediyor',
+    'information' => 'Bilgi',
+    'message' => 'Mesaj',
+    'name' => 'İsim',
+    'new' => 'Yeni',
+    'phone' => 'Telefon',
+    'resolved' => 'Çözüldü',
+    'save' => 'Kaydet',
+    'status' => 'Durum',
+    'subject' => 'Konu',
+    'thank_you_for_contacting_us' => 'Bizimle iletişime geçtiğiniz için teşekkürler',
+    'thank_you_for_using_sitename' => ':sitename kullandığınız için teşekkürler!',
+    'title' => 'Başlık',
+    'we_have_received_your_message_we_will_get_back_to_you_shortly' => 'Mesajınızı aldık. En kısa sürede size döneceğiz.',
+];
