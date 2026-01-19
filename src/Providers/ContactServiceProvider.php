@@ -23,7 +23,7 @@ class ContactServiceProvider extends ServiceProvider
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
-        $this->loadMigrationsFrom(__DIR__ . '/../Database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
         $this->app->register(RouteServiceProvider::class);
     }
 
@@ -48,9 +48,9 @@ class ContactServiceProvider extends ServiceProvider
     protected function registerConfig(): void
     {
         $this->publishes([
-            __DIR__ . '/../config/contact.php' => config_path('contact.php'),
+            __DIR__ . '/../../config/contact.php' => config_path('contact.php'),
         ], 'contact-config');
-        $this->mergeConfigFrom(__DIR__ . '/../config/contact.php', 'contact');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/contact.php', 'contact');
     }
 
     protected function registerTranslations(): void
