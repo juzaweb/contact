@@ -12,5 +12,8 @@
         "psr-4": {
             "Juzaweb\\Modules\\Contact\\": "src/"
         }
+    },
+    "require-dev": {
+        "juzaweb/core": "dev-master"
     }
 }
