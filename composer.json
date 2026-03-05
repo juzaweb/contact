@@ -19,7 +19,7 @@
         }
     },
     "require-dev": {
-        "juzaweb/core": "dev-master",
+        "juzaweb/core": "^5.0",
         "orchestra/testbench": "^9.0",
         "phpunit/phpunit": "^10.5"
     }
