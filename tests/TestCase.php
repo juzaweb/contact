@@ -14,6 +14,7 @@ abstract class TestCase extends BaseTestCase
     protected function getPackageProviders($app)
     {
         return [
+            \Juzaweb\Hooks\HooksServiceProvider::class,
             CoreServiceProvider::class,
             ContactServiceProvider::class,
             \Juzaweb\QueryCache\QueryCacheServiceProvider::class,
@@ -38,21 +39,5 @@ abstract class TestCase extends BaseTestCase
         ]);
 
         $app['config']->set('translatable.fallback_locale', 'en');
-
-        $app->bind(\Juzaweb\Hooks\Contracts\Hook::class, function () {
-            return new class implements \Juzaweb\Hooks\Contracts\Hook {
-                public function addAction(string $hook, $callback, int $priority = 20, int $arguments = 1) {}
-                public function removeAction(string $hook, $callback, int $priority = 20) {}
-                public function removeAllActions(?string $hook = null): void {}
-                public function addFilter(string $hook, $callback, int $priority = 20, int $arguments = 1) {}
-                public function removeFilter(string $hook, $callback, int $priority = 20) {}
-                public function removeAllFilters(?string $hook = null) {}
-                public function filter(): mixed { return func_get_arg(0) ?? null; }
-                public function action(): void {}
-                public function getAction() {}
-                public function getFilter() {}
-                public function allAction(): array { return []; }
-            };
-        });
     }
 }
