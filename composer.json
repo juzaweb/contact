@@ -1,6 +1,7 @@
 {
     "name": "juzaweb/contact",
     "type": "juzaweb-module",
+    "license": "GPL-2.0",
     "description": "Contact Module",
     "authors": [
         {
