@@ -29,6 +29,49 @@ class ContactRouteTest extends TestCase
     }
 
     /** @test */
+    public function it_can_validate_api_contact_store_route()
+    {
+        $response = $this->postJson('api/v1/contact', []);
+        $response->assertStatus(422);
+
+        $response->assertJsonValidationErrors(['name', 'email', 'subject', 'message']);
+    }
+
+    /** @test */
+    public function it_can_store_a_contact_via_api()
+    {
+        Notification::fake();
+
+        $data = [
+            'name' => 'Jane Doe API',
+            'email' => 'jane@gmail.com',
+            'subject' => 'Hello World API!',
+            'message' => 'This is the test message from API',
+        ];
+
+        $response = $this->postJson('api/v1/contact', $data);
+
+        $response->assertStatus(200);
+        $response->assertJson([
+            'status' => true,
+        ]);
+
+        $this->assertDatabaseHas('contacts', [
+            'name' => 'Jane Doe API',
+            'email' => 'jane@gmail.com',
+            'subject' => 'Hello World API!',
+        ]);
+
+        Notification::assertSentTo(
+            new \Illuminate\Notifications\AnonymousNotifiable,
+            \Juzaweb\Modules\Contact\Notifications\ThankNotification::class,
+            function ($notification, $channels, $notifiable) use ($data) {
+                return $notifiable->routes['mail'] === $data['email'];
+            }
+        );
+    }
+
+    /** @test */
     public function it_can_store_a_contact()
     {
         Notification::fake();
