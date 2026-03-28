@@ -30,16 +30,6 @@ The module follows a typical Laravel/Juzaweb module structure based on the MVC p
 
 To start the development server or test the code, follow these instructions:
 
-### Setup Environment
-Use the provided `setup.sh` script to install PHP 8.2/8.3, Composer, Node.js, and fetch all necessary package dependencies.
-```bash
-./setup.sh -p 8.2
-```
-Or to install Node as well:
-```bash
-./setup.sh -p 8.2 -npm
-```
-
 ### Running Tests
 The module uses `orchestra/testbench` for isolated environment testing. The test database is configured to use an in-memory SQLite database.
 To run tests, simply execute:
