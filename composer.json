@@ -22,6 +22,7 @@
     "require-dev": {
         "juzaweb/core": "^5.0",
         "orchestra/testbench": "^9.0",
-        "phpunit/phpunit": "^10.5"
+        "phpunit/phpunit": "^10.5",
+        "juzaweb/api": "^1.0"
     }
 }
