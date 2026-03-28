@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 
+use Juzaweb\Modules\Contact\Http\Controllers\Api\ContactController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -12,3 +14,5 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::post('contact', [ContactController::class, 'store']);
