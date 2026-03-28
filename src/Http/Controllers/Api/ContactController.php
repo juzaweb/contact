@@ -10,7 +10,7 @@ class ContactController extends Controller
 {
     /**
      * @OA\Post(
-     *      path="/api/v1/contact",
+     *      path="/api/contact",
      *      tags={"Contact"},
      *      summary="Submit a contact form",
      *      description="Create a new contact request",
