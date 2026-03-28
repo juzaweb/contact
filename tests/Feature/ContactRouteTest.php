@@ -31,7 +31,7 @@ class ContactRouteTest extends TestCase
     /** @test */
     public function it_can_validate_api_contact_store_route()
     {
-        $response = $this->postJson('api/v1/contact', []);
+        $response = $this->postJson('api/contact', []);
         $response->assertStatus(422);
 
         $response->assertJsonValidationErrors(['name', 'email', 'subject', 'message']);
@@ -49,7 +49,7 @@ class ContactRouteTest extends TestCase
             'message' => 'This is the test message from API',
         ];
 
-        $response = $this->postJson('api/v1/contact', $data);
+        $response = $this->postJson('api/contact', $data);
 
         $response->assertStatus(200);
         $response->assertJson([
